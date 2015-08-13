@@ -1,0 +1,86 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-toggle-button/paper-toggle-button.html">
+<link rel="import" href="../paper-styles/paper-styles-classes.html">
+
+<dom-module id="nodecg-toggle">
+    <style>
+        :host {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #toggle {
+            margin-right: 8px;
+        }
+    </style>
+
+    <template>
+        <div class="paper-font-subhead">
+            <content></content>
+        </div>
+        <paper-toggle-button id="toggle"></paper-toggle-button>
+    </template>
+</dom-module>
+
+<script>
+    window.NcgCornerSelect = Polymer({
+        is: 'nodecg-toggle',
+
+        /*
+         * Properties
+         */
+
+        properties: {
+            replicantName: {
+                type: String,
+                reflectToAttribute: true
+            },
+            replicantBundle: {
+                type: String,
+                reflectToAttribute: true
+            }
+        },
+
+        observers: [
+            'updateReplicant(replicantName, replicantBundle)'
+        ],
+
+        updateReplicant: function(name, bundle) {
+            // If there is an existing replicant, remove the event listener
+            if (this.replicant) {
+                this.replicant.removeListener('change', this._replicantValueChanged);
+            }
+
+            this.replicant = NodeCG.Replicant(name, bundle);
+
+            this.replicant.on('change', this._replicantValueChanged.bind(this));
+        },
+
+        /*
+         * Lifecycle
+         */
+
+        ready: function() {
+            var self = this;
+            var toggle = this.$.toggle;
+            toggle.addEventListener('change', function(e) {
+                self.replicant.value = e.target.checked;
+            });
+
+            // If `nodecg` is defined and `replicantBundle` is not, default it to `nodecg.bundleName`
+            if (window.nodecg && !this.replicantBundle) {
+                this.replicantBundle = window.nodecg.bundleName;
+            }
+        },
+
+        /*
+         * Events
+         */
+
+        // TODO: This is getting called twice when toggling
+        _replicantValueChanged: function(oldVal, newVal) {
+            this.$.toggle.checked = !!newVal;
+        }
+    });
+</script>

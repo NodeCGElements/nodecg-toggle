@@ -1,0 +1,30 @@
+{
+  "name": "nodecg-toggle",
+  "version": "0.0.0",
+  "homepage": "https://github.com/NodeCGElements/nodecg-toggle",
+  "authors": [
+    "Alex Van Camp <email@alexvan.camp>"
+  ],
+  "description": "A NodeCG dashboard element that toggles the boolean state of a replicant.",
+  "main": "nodecg-toggle.html",
+  "keywords": [
+    "nodecg",
+    "dashboard",
+    "polymer",
+    "element",
+    "toggle",
+    "boolean"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.5",
+    "polymer": "~1.0.8"
+  }
+}
