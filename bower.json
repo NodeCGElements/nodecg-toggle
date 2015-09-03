@@ -24,7 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.5",
-    "polymer": "~1.0.8"
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.5"
   }
 }
