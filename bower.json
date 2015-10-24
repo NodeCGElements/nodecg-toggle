@@ -24,6 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.5"
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.8",
+    "nodecg-replicant": "NodeCGElements/nodecg-replicant#~0.3.0",
+    "paper-styles": "PolymerElements/paper-styles#~1.0.12"
   }
 }
