@@ -24,7 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "nodecg-replicant": "NodeCGElements/nodecg-replicant#~0.5.4",
+    "nodecg-replicant": "NodeCGElements/nodecg-replicant#^0.5.7",
     "paper-styles": "PolymerElements/paper-styles#^1.0.12"
   },
   "devDependencies": {
