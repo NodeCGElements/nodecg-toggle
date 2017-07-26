@@ -1,13 +1,11 @@
-# Node / Bower
-bower_components/
-node_modules/
-
-# OS specific
-.DS_Store
+bower_components
+node_modules
+coverage
+.nyc_output
 
 # JetBrains IDEs (IntelliJ/WebStorm)
-.idea/
-*.iml
-
-# Don't ignore .empty_directory files
-!.empty_directory
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/copyright/profiles_settings.xml
+/.idea/workspace.xml
+/.idea/shelf/
