@@ -24,10 +24,12 @@
     "tests"
   ],
   "dependencies": {
-    "nodecg-replicant": "NodeCGElements/nodecg-replicant#^0.5.7",
-    "paper-styles": "PolymerElements/paper-styles#^1.0.12"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "nodecg-replicant": "NodeCGElements/nodecg-replicant#^1.0.0",
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.1.4"
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }

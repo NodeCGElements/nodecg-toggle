@@ -1,0 +1,39 @@
+{
+  "name": "nodecg-toggle",
+  "version": "0.1.1",
+  "description": "A NodeCG dashboard element that toggles the boolean state of a replicant.",
+  "main": "nodecg-toggle.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeCGElements/nodecg-toggle.git"
+  },
+  "keywords": [
+    "nodecg",
+    "dashboard",
+    "panel",
+    "element",
+    "polymer",
+    "component",
+    "toggle",
+    "boolean",
+    "binary"
+  ],
+  "author": "Alex Van Camp <email@alexvan.camp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeCGElements/nodecg-toggle/issues"
+  },
+  "homepage": "https://github.com/NodeCGElements/nodecg-toggle#readme",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-xo": "^0.18.2",
+    "eslint-plugin-html": "^3.1.1",
+    "standard-version": "^4.2.0"
+  },
+  "scripts": {
+    "test": "eslint **/*.js **/*.html",
+    "prerelease": "npm t",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags"
+  }
+}
