@@ -20,4 +20,3 @@ before_install:
 script:
   # Run our tests with virtual X frame buffer, needed for the selenium browser tests
   - xvfb-run npm test
-after_success: npm run coverage
